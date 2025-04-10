@@ -20,7 +20,7 @@ jobs:
       - name: set id_rsa # 设置 id_rsa
         run: |
           mkdir -p ~/.ssh/
-          echo "${{secrets.MY_ID_RSA}}" > ~/.ssh/id_rsa
+          echo "${{secrets.MY_ID_RSA}}" > ~/.ssh/id_rsa # 仓库 Settings>Actions> 添加，把本地id_rsa内容拷贝添加 
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan 125.124.59.115 >> ~/.ssh/known_hosts
 
